@@ -60,13 +60,19 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" 
+                                    style="cursor: pointer" 
+                                    data-toggle="modal" 
+                                    data-target="#loginModal">{{ __('Login') }}</a>
                                 </li>
                             @endif
                             
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" 
+                                    style="cursor: pointer" 
+                                    data-toggle="modal" 
+                                    data-target="#registerModal">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -92,10 +98,12 @@
                 </div>
             </div>
         </nav>
-
+        @include('partials.register')
+        @include('partials.login')
         <main class="pb-4" style="background-color: #DAE1E7">
             @yield('content')
         </main>
     </div>
+    @yield('scripts')
 </body>
 </html>
