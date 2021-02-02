@@ -11,7 +11,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -21,7 +22,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark shadow-sm sticky-top" style="background-color: #142850">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -32,8 +33,25 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
+                    <ul class="navbar-nav pl-5 mr-auto">
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Item 1</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Item 2</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Item 3</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Item 4</a>
+                          </li>
+                          <li class="nav-item">
+                            <form class="d-flex ml-3">
+                                <input class="form-control me-2" style="width:400px;" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-light ml-2" type="submit">Search</button>
+                              </form>
+                          </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -75,7 +93,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="pb-4" style="background-color: #DAE1E7">
             @yield('content')
         </main>
     </div>
