@@ -2,10 +2,10 @@
 
 @section('content')
 <div class="home-seccion1">
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div id="home-carrusel" class="carousel slide" data-bs-ride="carousel" style="height: 500px">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="{{asset('images/image-home-header.jpg')}}" class="d-block w-100" style="height: 400px" alt="slider-image">
+            <h3>MomentumDev</h3>
           </div>          
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">

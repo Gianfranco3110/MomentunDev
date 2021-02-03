@@ -18,6 +18,7 @@ use App\Http\Middleware\Authenticate;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // USUARIO
 Route::get('/configuracion', 'UserController@config')->name('config');
