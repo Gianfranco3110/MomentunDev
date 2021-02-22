@@ -1,0 +1,10 @@
+.home-seccion1{
+    max-height: 400px;
+}
+
+#home-carrusel{
+    background: url('../images/image-home-header.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(#000000, #000000, #000000, 0.3);
+}
